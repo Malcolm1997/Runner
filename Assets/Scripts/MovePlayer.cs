@@ -25,7 +25,7 @@ public class MovePlayer : MonoBehaviour
 
     void movimiento()
     {
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             if (cont != 2)
             {
@@ -33,7 +33,7 @@ public class MovePlayer : MonoBehaviour
                 cont += 1; 
             }
         }
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             if (cont != -2)
             {
@@ -41,13 +41,13 @@ public class MovePlayer : MonoBehaviour
                 cont -= 1;
             }
         }
-        if (Input.GetKeyDown("space") && enElSuelo == true)
+        if (Input.GetKeyDown(KeyCode.Space) && enElSuelo == true)
         {
             rb.AddForce(0, salto, 0, ForceMode.Impulse);
             enElSuelo = false;
         }
         
-        this.transform.position = this.transform.position + new Vector3(0, 0, avanceDelantero * Time.deltaTime);
+        
     }
 
     private void OnCollisionEnter(Collision collision)
