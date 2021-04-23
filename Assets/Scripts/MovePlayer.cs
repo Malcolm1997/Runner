@@ -41,7 +41,7 @@ public class MovePlayer : MonoBehaviour
                 cont -= 1;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space) && enElSuelo == true)
+        if (Input.GetKeyDown("space") && enElSuelo == true)
         {
             rb.AddForce(0, salto, 0, ForceMode.Impulse);
             enElSuelo = false;
@@ -55,6 +55,11 @@ public class MovePlayer : MonoBehaviour
         if(collision.gameObject.CompareTag("Suelo"))
         {
             enElSuelo = true;
+            Debug.LogError("Hola");
+        }
+        if (collision.gameObject.CompareTag("Obstaculo"))
+        {
+            Debug.Log("Perdiste gil");
         }
     }
 }

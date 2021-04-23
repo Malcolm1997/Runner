@@ -1,19 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovePiso : MonoBehaviour
 {
-    float avanceDelantero = 15f;
+    float avanceDelantero = 5f;
     public GameObject piso;
-    void Start()
-    {
-        
-    }
+    public Text puntaje;
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = this.transform.position + new Vector3(0, 0, avanceDelantero * Time.deltaTime);
+        
+        movimientoPiso();
+
+        generacionDeMundo();
+        
+        
+
     }
+
+    void movimientoPiso()
+    {
+        this.transform.position = this.transform.position + new Vector3(0, 0, -avanceDelantero * Time.deltaTime);
+    }
+
+    void generacionDeMundo()
+    {
+        if (Mathf.Round(transform.position.z) == (-58))
+        {
+            Instantiate(piso, new Vector3(0, 0, 98), Quaternion.identity);
+            Destroy(piso);
+        }
+    }
+
+    
+    
+    
 }
