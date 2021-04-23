@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3056308423072114064}
+  - component: {fileID: 6915063880223866955}
   m_Layer: 0
   m_Name: road1
-  m_TagString: Untagged
+  m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +32,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6915063880223866955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031520947116808067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c902fa827b8f44998f2fa04085e8d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piso: {fileID: 2031520947116808067}
+  puntaje: {fileID: 0}
 --- !u!1 &7483559100042552377
 GameObject:
   m_ObjectHideFlags: 0

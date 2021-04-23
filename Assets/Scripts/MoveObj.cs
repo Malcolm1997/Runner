@@ -23,4 +23,12 @@ public class MoveObj : MonoBehaviour
     {
         this.transform.position = this.transform.position + new Vector3(0, 0, -avanceDelantero * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Puto");
+        }
+    }
 }

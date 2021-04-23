@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 8994021905377605061}
   - component: {fileID: 8994021905377605058}
   - component: {fileID: 8994021905377605059}
-  - component: {fileID: 8994021905377605056}
-  - component: {fileID: 8994021905377605063}
+  - component: {fileID: 3434881571070560560}
   m_Layer: 0
   m_Name: MovableObs
   m_TagString: Untagged
@@ -57,6 +56,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -68,6 +68,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -94,7 +95,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &8994021905377605056
+--- !u!114 &3434881571070560560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,23 +104,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8994021905377605057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c78eaffd4b5a704daa689d5bc3e3e09, type: 3}
+  m_Script: {fileID: 11500000, guid: 32e178e6823daa34e8392d8b1e7f331d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 5
-  horizontal: 1
-  speed: 3
---- !u!114 &8994021905377605063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994021905377605057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdffcc51f538bef4c8abd3b5bbb6ff17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 10
-  stunTime: 0.3

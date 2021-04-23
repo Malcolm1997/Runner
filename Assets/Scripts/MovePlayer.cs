@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     int cont = 0;
-    public float speed = 5f;
+    public float speed = 4f;
     public float avanceDelantero = 1f;
     public float salto = 5f;
     public Rigidbody rb;
