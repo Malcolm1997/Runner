@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class MovePiso : MonoBehaviour
 {
-    float avanceDelantero = 5f;
+    float avanceDelantero = 10f;
     public GameObject piso;
-    public Text puntaje;
+    
 
     // Update is called once per frame
     void Update()
@@ -30,7 +30,7 @@ public class MovePiso : MonoBehaviour
     {
         if (Mathf.Round(transform.position.z) == (-58))
         {
-            Instantiate(piso, new Vector3(0, 0, 98), Quaternion.identity);
+            Instantiate(piso, new Vector3(0, 0, 137), Quaternion.identity);
             Destroy(piso);
         }
     }

@@ -5,7 +5,8 @@ using UnityEngine;
 public class MoveObj : MonoBehaviour
 {
 
-    float avanceDelantero = 5f;
+    float avanceDelantero = 10f;
+    public GameObject piso;
 
     // Start is called before the first frame update
     void Start()
@@ -17,18 +18,22 @@ public class MoveObj : MonoBehaviour
     void Update()
     {
         movimientoPiso();
+        generacionDeMundo();
+        
     }
 
     void movimientoPiso()
     {
         this.transform.position = this.transform.position + new Vector3(0, 0, -avanceDelantero * Time.deltaTime);
     }
-
-    private void OnCollisionEnter(Collision collision)
+    void generacionDeMundo()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (Mathf.Round(transform.position.z) == (-3))
         {
-            Debug.Log("Puto");
+            Instantiate(piso, new Vector3(Random.Range(-8.0f,8.0f), 3, 98), Quaternion.identity);
+            Destroy(piso);
         }
     }
+
+
 }

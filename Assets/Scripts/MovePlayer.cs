@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MovePlayer : MonoBehaviour
 {
     int cont = 0;
     public float speed = 4f;
-    public float avanceDelantero = 1f;
     public float salto = 5f;
     public Rigidbody rb;
     bool enElSuelo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,11 @@ public class MovePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         movimiento();
+        
     }
+
+    
 
     void movimiento()
     {
@@ -49,17 +52,17 @@ public class MovePlayer : MonoBehaviour
         
         
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Suelo"))
         {
             enElSuelo = true;
-            Debug.LogError("Hola");
+
         }
         if (collision.gameObject.CompareTag("Obstaculo"))
         {
-            Debug.Log("Perdiste gil");
+            enElSuelo = true;
+
         }
     }
 }
